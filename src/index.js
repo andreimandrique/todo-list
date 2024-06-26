@@ -48,4 +48,12 @@ btnAdd.addEventListener("click", () => {
   }
 });
 
+const myTask1 = new Task(
+  "Valorant",
+  "Play valorant with my friends",
+  "Low",
+  "2024-06-12"
+);
+myTask1.setTask();
+
 displayTask();
