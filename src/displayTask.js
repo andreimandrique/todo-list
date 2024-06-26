@@ -92,8 +92,12 @@ function displayTask() {
     detailDiv.style.display = "none";
 
     priorityDiv.innerText = task["priority"];
-    const myDate = format(task["date"], "eeee PP");
+
+    const taskDate = task["date"];
+    const dateObject = new Date(taskDate);
+    const myDate = format(dateObject, "eeee PP");
     dateDiv.innerText = myDate;
+
     descriptionDiv.innerText = task["description"];
 
     detailDiv.appendChild(priorityDiv);
