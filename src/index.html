@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,7 +6,43 @@
     <title>Document</title>
   </head>
   <body>
-    <img id="myProfilePic" src="" alt="" />
-    <h1>Haruhiro</h1>
+    <div class="center">
+      <h1>Todo List</h1>
+    </div>
+    <div class="center">
+      <button class="btn" id="showAdd">Add</button>
+    </div>
+    <div class="center">
+      <div class="add-container">
+        <div class="input-container">
+          <input
+            class="input-title"
+            type="text"
+            id="inputTitle"
+            placeholder="Task Title"
+          />
+          <br />
+          <input
+            class="input-description"
+            type="text"
+            id="inputDescription"
+            placeholder="Description..."
+          />
+          <br />
+          <select class="input-priority" id="inputPriority">
+            <option value="High">High</option>
+            <option value="Mid">Mid</option>
+            <option value="Low">Low</option>
+          </select>
+          <input class="input-date" type="date" id="inputDate" />
+        </div>
+        <div class="btn-container">
+          <button class="btn" id="btnAdd">Add Task</button>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <div id="taskContainer"></div>
+    </div>
   </body>
 </html>

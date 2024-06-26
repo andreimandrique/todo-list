@@ -1,9 +1,103 @@
-@font-face {
-  font-family: "Playwrite AU VIC";
-  src: url("https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-h1 {
-  font-family: "Playwrite AU VIC", cursive;
-  color: blue;
+.center {
+  display: flex;
+  justify-content: center;
+}
+.center > h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.add-container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: clamp(220px, 42vw, 80%);
+}
+.input-title,
+.input-description {
+  margin-top: 9px;
+  margin-left: 9px;
+  width: 96%;
+  border: none;
+  outline: 0;
+  width: 90%;
+}
+.input-title {
+  font-size: large;
+}
+.input-description {
+  font-size: medium;
+}
+.input-priority,
+.input-date {
+  margin-top: 9px;
+  margin-left: 9px;
+}
+.btn-container {
+  margin: 9px;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 0.6rem 2rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+#taskContainer {
+  display: flex;
+  flex-direction: column;
+  width: clamp(220px, 42vw, 80%);
+}
+.todo-box-div {
+  margin-top: 1rem;
+  border: 1px solid black;
+}
+.option-div {
+  margin: 9px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.done-div {
+  border-radius: 16px;
+  border: 1px solid black;
+  height: 2rem;
+  width: 2rem;
+}
+.done-div:hover {
+  cursor: pointer;
+  background-image: url("./check.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-style {
+  cursor: default;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-div {
+  cursor: pointer;
+  background-image: url("./edit.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2rem;
+  width: 2rem;
+}
+.detail-div {
+  margin: 9px;
+}
+.detail-div > p {
+  margin-bottom: 6px;
 }
