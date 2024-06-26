@@ -13,3 +13,7 @@ npm run build
 For more information about webpack 
 
 https://webpack.js.org/
+
+For more information about date-fns 
+
+https://date-fns.org/
