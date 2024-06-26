@@ -3,7 +3,6 @@ import Task from "./task.js";
 import displayTask from "./displayTask.js";
 
 const h1Title = document.querySelector("h1");
-
 const inputTitle = document.getElementById("inputTitle");
 const inputDescription = document.getElementById("inputDescription");
 const inputPriority = document.getElementById("inputPriority");
@@ -48,13 +47,5 @@ btnAdd.addEventListener("click", () => {
     addContainer.style.display = "none";
   }
 });
-
-const myTask = new Task(
-  "League of Legends",
-  "Play yasuo and carry my teammates",
-  "Mid",
-  "2024-06-30"
-);
-myTask.setTask();
 
 displayTask();

@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { formatDate } from "date-fns/format";
 
 function displayTask() {
   const taskContainer = document.getElementById("taskContainer");
@@ -94,8 +94,7 @@ function displayTask() {
     priorityDiv.innerText = task["priority"];
 
     const taskDate = task["date"];
-    const dateObject = new Date(taskDate);
-    const myDate = format(dateObject, "eeee PP");
+    const myDate = formatDate(taskDate, "eeee PP");
     dateDiv.innerText = myDate;
 
     descriptionDiv.innerText = task["description"];
