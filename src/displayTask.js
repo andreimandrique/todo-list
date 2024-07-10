@@ -28,6 +28,9 @@ function displayTask() {
     });
 
     editDiv.addEventListener("click", () => {
+      const btnCancel = document.getElementById("btnCancel");
+      btnCancel.style.display = "none";
+
       show = false;
       const inputTitle = document.getElementById("inputTitle");
       const inputDescription = document.getElementById("inputDescription");

@@ -2,18 +2,19 @@ import "./style.css";
 import Task from "./task.js";
 import displayTask from "./displayTask.js";
 
-const h1Title = document.querySelector("h1");
 const inputTitle = document.getElementById("inputTitle");
 const inputDescription = document.getElementById("inputDescription");
 const inputPriority = document.getElementById("inputPriority");
 const inputDate = document.getElementById("inputDate");
 const btnAdd = document.getElementById("btnAdd");
+const btnCancel = document.getElementById("btnCancel");
 
 const addContainer = document.querySelector(".add-container");
 const showAdd = document.getElementById("showAdd");
 
 addContainer.style.display = "none";
 showAdd.addEventListener("click", () => {
+  btnCancel.style.display = "block";
   btnAdd.innerText = "Add Task";
   addContainer.style.display = "block";
   showAdd.style.display = "none";
@@ -23,18 +24,19 @@ showAdd.addEventListener("click", () => {
   inputDate.value = "";
 });
 
+btnCancel.addEventListener("click", () => {
+  addContainer.style.display = "none";
+  showAdd.style.display = "block";
+});
+
 btnAdd.addEventListener("click", () => {
   if (
     inputTitle.value == "" ||
     inputDescription.value == "" ||
     inputDate.value == ""
   ) {
-    console.log("empty");
-    h1Title.textContent = "Fill out all Info";
-    h1Title.style.color = "red";
+    alert("Fill out all input");
   } else {
-    h1Title.textContent = "Todo List";
-    h1Title.style.color = "black";
     const myTask = new Task(
       inputTitle.value,
       inputDescription.value,

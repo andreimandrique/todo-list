@@ -41,7 +41,7 @@
 .btn-container {
   margin: 9px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .btn {
